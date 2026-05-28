@@ -1,0 +1,29 @@
+    #Question 1
+    An IDE(Integrated Development Environment) is the home of your code. It is the Environment in which your code is written,
+    We use IDE'S over text editors because environments come with features that a text editor doesn't, these features are syntax highlighting, A debugger and lastly the ability to test.
+    An example of a text editor is the notepad app, you can write your code in it, but you won't see an instant response where you go wrong.
+    An example of an IDE is Virtual Studio Code, this will highlightr your code when you are going wrong even before you start testing.
+    An IDE is valuable to you as a developer because, you need to work smart not hard and because of the featuires an IDE comes with it allows you to work faster.
+
+    #Question 2
+    Version Control is basically a code time machine, it allows you to go back to the past and fix whatever problems you may have caused for the future.
+    Version control keeps the changes you made for every push. So if I were to get married get engaged(git add), then get married(git commit), and lastly change my surname on my ID(git push).
+    With that scenario if we were to reach a point where we want to break up. We would devorce and I would go back to my surname, which was my initial comit upon being born.
+    The difference between local and remote is that, like in my example when I add or get engaged we are saying that we are happy with being together; like we'd be happy with the code we wrote and that doesn't change on my ID(remote) because this change can be seen from any machine I clone on.
+    But if you meet me or see me(local) you'll see me and acknowledge thand acknowledge that there is a achange made.
+    Circling back to get add.- git add is the engagement or in technical terms its where we stage or changes locally.
+
+    #Question 3
+    A build tool is like a personal assistant that you communicate with through an .xml file, you write what you would like her to do and what to use while doing this.
+    Build tools help with monitoring your project's lifecycle, and figuring out which part of it doesn't work.
+    Maven brings the ability to check your project's lifecycle, The plugins you have used as specified on you .xml file, The dependencies that have been used also specified on your .xml file and lastly it helps you find out which repo you are working on if you are working in one.
+    Although I prefer to use the built-in maven button on IntelliJ there are commands you have to install first(the button has a sync option which does this automatically) you'd first run mvn clean, mvn compile, mvn test there are more but these are the ones we'd use every day.
+
+  #Question 4
+  A constructor is the birth certificate of class, it is the introductory method for the class.
+  A constructor introduces your class to you or anyone reading your code.
+  A default constructor is a constructor that has been given to the class and takes in no parameters(additional information) a  parameterised constructor is a constructor with parameters.
+  You would define your own when you want to add information to it and not use the default one.
+
+  #Question 4
+  OOP is when we write programs that are broken down into smaller. simpler and understandable objects. A class is basically your broad definition or blueprint for what you are expecting from your methods.
