@@ -1,29 +1,61 @@
     #Question 1
-    An IDE(Integrated Development Environment) is the home of your code. It is the Environment in which your code is written,
-    We use IDE'S over text editors because environments come with features that a text editor doesn't, these features are syntax highlighting, A debugger and lastly the ability to test.
-    An example of a text editor is the notepad app, you can write your code in it, but you won't see an instant response where you go wrong.
-    An example of an IDE is Virtual Studio Code, this will highlightr your code when you are going wrong even before you start testing.
-    An IDE is valuable to you as a developer because, you need to work smart not hard and because of the featuires an IDE comes with it allows you to work faster.
+    An IDE, which stands for Integrated Development Environment,
+    is a software application that provides everything a developer needs to write, run, and debug code all in one place.
+    Unlike a plain text editor like Notepad, which just lets you type text,
+    an IDE understands the programming language you are working with and actively helps you as you code.
+    \On a daily basis, an IDE is valuable because it gives you features like syntax highlighting,
+    which colours your code so you can spot mistakes easily, auto-complete,
+    which suggests code as you type so you make fewer errors and work faster, and a built-in debugger,
+    which helps you pause your program and inspect what is happening when something goes wrong.
+    It also usually integrates with tools like Maven and Git so you do not have to leave the IDE to manage your project.
+    The most commonly used IDEs for Java development are IntelliJ IDEA and Eclipse.
+    IntelliJ IDEA is particularly popular among professional Java developers because of how smart its auto-complete and error detection features are.
 
     #Question 2
-    Version Control is basically a code time machine, it allows you to go back to the past and fix whatever problems you may have caused for the future.
-    Version control keeps the changes you made for every push. So if I were to get married get engaged(git add), then get married(git commit), and lastly change my surname on my ID(git push).
-    With that scenario if we were to reach a point where we want to break up. We would devorce and I would go back to my surname, which was my initial comit upon being born.
-    The difference between local and remote is that, like in my example when I add or get engaged we are saying that we are happy with being together; like we'd be happy with the code we wrote and that doesn't change on my ID(remote) because this change can be seen from any machine I clone on.
-    But if you meet me or see me(local) you'll see me and acknowledge thand acknowledge that there is a achange made.
-    Circling back to get add.- git add is the engagement or in technical terms its where we stage or changes locally.
+    Version control is a system that keeps track of every change made to the code over time,
+    so that you can always go back to an earlier version if something breaks.
+    The way it works is that each time you are happy with a change you made, you save a snapshot of that change called a commit,
+    and that commit is stored with a message describing what you did.
+    This means if my teammate introduced a change that broke a working feature,
+    we can look through the history of commits, find the exact commit where things went wrong,
+    and either revert to the version before that change or understand exactly what was changed so we can fix it.
+    A local repository is the copy of the project that lives on your own computer,
+    and a remote repository is the copy stored on a server like GitHub that everyone on the team can access and share.
+    The step git add is what you do before saving a snapshot. It is called staging,
+    and it lets you choose which changed files you want to include in your next commit.
+    It is a necessary step because it gives you control over exactly what goes into each commit,
+    so you do not accidentally save unfinished work or unrelated changes alongside the change you actually want to record.
 
     #Question 3
-    A build tool is like a personal assistant that you communicate with through an .xml file, you write what you would like her to do and what to use while doing this.
-    Build tools help with monitoring your project's lifecycle, and figuring out which part of it doesn't work.
-    Maven brings the ability to check your project's lifecycle, The plugins you have used as specified on you .xml file, The dependencies that have been used also specified on your .xml file and lastly it helps you find out which repo you are working on if you are working in one.
-    Although I prefer to use the built-in maven button on IntelliJ there are commands you have to install first(the button has a sync option which does this automatically) you'd first run mvn clean, mvn compile, mvn test there are more but these are the ones we'd use every day.
+    A build tool is a program that automates the repetitive tasks involved in turning your source code into a working application,
+    things like compiling the code, downloading libraries your project depends on, and running your tests.
+    The problem it solves is that without one, every developer on the team has to manually figure out how to compile the project,
+    which version of each library to use, and how to run tests, and everyone ends up doing it differently which causes confusion and bugs that only appear on some machines.
+    Maven is a build tool for Java that solves this by using a single file called pom.xml where you declare everything the project needs, the dependencies, the plugins, and the project details, and Maven handles the rest automatically.
+    This means every developer on the team gets the exact same setup just by running the same commands.
+    Maven also introduces the concept of a build lifecycle, so it knows the correct order in which to do things.
+    The key commands the team would use every day are mvn clean, which deletes any previously compiled files so you start fresh, mvn compile,
+    which compiles all your Java source code, and mvn test, which compiles and then runs all your unit tests to check that nothing is broken.
 
-  #Question 4
-  A constructor is the birth certificate of class, it is the introductory method for the class.
-  A constructor introduces your class to you or anyone reading your code.
-  A default constructor is a constructor that has been given to the class and takes in no parameters(additional information) a  parameterised constructor is a constructor with parameters.
-  You would define your own when you want to add information to it and not use the default one.
+    #Question 4
+    A constructor is a special method in a class that runs automatically when you create a new object from that class.
+    Its job is to set up the object and give it its starting values.
+    The reason it has the same name as the class is just how Java knows it is a constructor and not a regular method.
+    A default constructor is one that takes no parameters, meaning when you create an object you do not pass any information to it,
+    and Java actually provides one invisibly if you do not write one yourself.
+    A parameterised constructor is one that takes parameters, so when you create the object you pass in values that get stored on that object right away.
+    You would define your own constructor when you want to make sure an object always starts with specific information rather than having empty or default values.
+    For example, if you have a Student class, you would write a parameterised constructor that takes a name and a student ID so that every Student object is created with those details already set, and you cannot accidentally create a student with no name.
 
-  #Question 4
-  OOP is when we write programs that are broken down into smaller. simpler and understandable objects. A class is basically your broad definition or blueprint for what you are expecting from your methods.
+    #Question 5
+    Object-Oriented Programming, or OOP, is a way of writing programs by modelling the real world as a collection of objects,
+    where each object is a self-contained unit that holds both its data and the behaviour related to that data.
+    Your teammate's suggestion of using separate arrays for student names, marks, and IDs gets messy very quickly because all those arrays have to stay in sync manually.
+    If you add a student to the names array but forget to add a placeholder to the marks array, your data is already broken.
+    OOP solves this by letting you group all the data that belongs together into one thing.
+    A class is the blueprint or template that describes what every object of that type will look like and what it can do.
+    So you would write a Student class that says every student has a name, an ID, and a mark, and you only write that definition once.
+    An object is a single real thing created from that blueprint, so a student named Sipho with ID 1001 and a mark of 78 would be one object.
+    An instance means the same thing as an object, it is just the word used when talking about a specific copy of the class that exists in memory.
+    So instead of three separate arrays you would have a single list of Student objects, each one carrying all its own information together,
+    which makes your code far easier to read, manage, and expand later.
