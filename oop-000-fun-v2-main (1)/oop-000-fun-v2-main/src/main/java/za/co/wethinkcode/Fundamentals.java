@@ -7,11 +7,11 @@ public class Fundamentals {
     // ============================
 
     public static boolean isPrime(int n) {
-        if (n <= 2) return false;
-        for (int i = 2; i <= n; i++) {
-            if (n % i == 0) return true;
+        if (n < 2) return false;
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) return false;
         }
-        return false;
+        return true;
     }
 
     // ============================
@@ -53,12 +53,17 @@ public class Fundamentals {
 
 
     public static int countVowels(String s) {
-        String vowels = "aeiou";
+        if (s == null || s.isEmpty()) return 0;
+        String vowels = "aeiouAEIOU";
         int total = 0;
-        if (s.equals("") || s.equals(null)) return 0;
-
-        return  total;
+        for (int i = 0; i < s.length(); i++) {
+            if (vowels.indexOf(s.charAt(i)) != -1) {
+                total++;
+            }
+        }
+        return total;
     }
 
 
+    
 }
